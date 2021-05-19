@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {
   commentes_create,
   commentes_update,
@@ -38,8 +38,18 @@ export class CommentsService {
    * @returns
    */
   createComment(aobData: commentes_create) {
-    // return this.httpClient.post(this.API_URL+'api/v1/comments');
-    return null;
+    let httpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Cache-Control': 'no-cache',
+    });
+    let options = {
+      headers: httpHeaders,
+    };
+    return this.httpClient.post<commentes_create>(
+      this.API_URL + '/api/v1/comments',
+      aobData,
+      options
+    );
   }
 
   updateComment(aobData: commentes_update, asParam: string) {

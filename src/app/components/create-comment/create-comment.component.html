@@ -15,14 +15,14 @@
         [(ngModel)]="createCommentComponent.name"
         placeholder="Nombre"
         required="required"
-         />
+      />
     </div>
     <div class="createcomment__body--inputemail">
       <input
         class="createcomment__body--input"
         type="email"
         name="email"
-        id="email" 
+        id="email"
         autocomplete="off"
         [(ngModel)]="createCommentComponent.email"
         placeholder="Correo electronico"
@@ -37,7 +37,7 @@
         type="text"
         name="website"
         [(ngModel)]="createCommentComponent.website"
-        id="website" 
+        id="website"
         placeholder="Pagina Web"
         autocomplete="off"
       />
@@ -46,7 +46,7 @@
       <input
         class="createcomment__body--input"
         type="text"
-        id="content" 
+        id="content"
         name="content"
         autocomplete="off"
         [(ngModel)]="createCommentComponent.content"
@@ -55,8 +55,12 @@
       />
     </div>
     <div class="createcomment__footer">
-      <button class="createcomment__footer--btcancel" type="reset">Cancelar</button>
-      <button class="createcomment__footer--btsuccess" type="submit">Guardar</button>
+      <button class="createcomment__footer--btcancel" type="reset">
+        Cancelar
+      </button>
+      <button class="createcomment__footer--btsuccess" type="submit">
+        Guardar
+      </button>
     </div>
   </form>
 </div>

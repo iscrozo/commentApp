@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  loginModel = new LoginModel('correo@email.com', '123456789');
+  loginModel = new LoginModel('', '');
 
   /**
    * Metodo de logueo

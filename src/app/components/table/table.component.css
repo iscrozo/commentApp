@@ -3,7 +3,6 @@
   background-color: #677baf;
   flex-direction: column;
   border-collapse: collapse;
-
 }
 
 .tablecustom th {
@@ -41,7 +40,7 @@
   background: #f8f4f4 !important;
   min-width: 50vh;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
 }
 
 .tablecustom__iconeye {
@@ -56,6 +55,6 @@
   margin-left: 15px;
   outline: none;
 }
-.tablecustom__iconeye:disabled{
+.tablecustom__iconeye:disabled {
   display: none;
 }

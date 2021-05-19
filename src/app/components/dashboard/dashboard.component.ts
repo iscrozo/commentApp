@@ -24,10 +24,5 @@ export class DashboardComponent implements OnInit {
       this.aobData = DataComments;
     });
   }
-
-
-
-  //   this.commentsServices.getCommentList().subscribe((DataComments) => {
-  //     this.DataComments = DataComments;
-  //  });
+ 
 }

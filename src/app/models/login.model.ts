@@ -16,14 +16,15 @@ export class LoginModel {
    * @returns
    */
   validateData(): boolean {
-    var EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var EMAIL_REGEX =
+      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     if (!this.isEmpty(this.email) && !this.isEmpty(this.password)) {
-      if(this.email.match(EMAIL_REGEX)){
-          return true;
-      }else{
-          console.log("Verifica el campo del correo");
-          return false;
+      if (this.email.match(EMAIL_REGEX)) {
+        return true;
+      } else {
+        console.log('Verifica el campo del correo');
+        return false;
       }
     } else {
       console.log('Verifica el formulario, hay campos erroneos');

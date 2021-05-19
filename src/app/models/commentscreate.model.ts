@@ -23,16 +23,23 @@ export class CommentsCreateModel {
   validateData(): number {
     let EMAIL_REGEX =
       /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    let DATA_AZ_REGEX = /^([a-zA-Z ])*$/;
-
+    let DATA_AZ_REGEX = /^.([a-zA-Z\s]){1,35}$/;
+    let URL_REGEX =
+      /^[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?$/;
+    let CONTENT_REGEX = /^.{1,100}$/;
     if (
       !this.isEmpty(this.name) &&
       !this.isEmpty(this.email) &&
       !this.isEmpty(this.content)
     ) {
-      if (this.name.match(DATA_AZ_REGEX)) { // validar solo letras y el tamaño 35
+      if (this.name.match(DATA_AZ_REGEX)) {
+        // validar solo letras y el tamaño 35
         return 1;
       } else if (this.email.match(EMAIL_REGEX)) {
+        // validar email
+        return 1;
+      } else if (this.website.match(URL_REGEX)) {
+        // validar url
         return 1;
       } else {
         console.log('Verifica el campo del correo');

@@ -25,7 +25,7 @@ export class TableComponent implements OnInit {
   /**
    *
    */
-  calcStyle(value: any, value2:any, value3: any) {
+  calcStyle(value: any, value2: any, value3: any) {
     if (value != null && value2 != null && value3 != null) {
       return { display: 'block' };
     } else {
