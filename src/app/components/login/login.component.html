@@ -1,5 +1,10 @@
 <div class="login">
-  <form class="login__form" (ngSubmit)="onSubmit()" autocomplete="off">
+  <form
+    class="login__form"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+    autocomplete="off"
+  >
     <img
       class="login__form--image"
       src="../../assets/login/logo.png"
@@ -13,24 +18,29 @@
         name="email"
         id="email"
         autocomplete="off"
-        [(ngModel)]="loginModel.email"
         placeholder="Usuario"
         required="required"
+        formControlName="email"
       />
     </div>
     <div class="login__form--inputlock">
       <input
-      class="login__form--input"
-      id="password"
-      [(ngModel)]="loginModel.password"
-      type="password"
-      autocomplete="off"
-      name="password"
-      placeholder="Contraseña"
-      required="required"
-    />
+        class="login__form--input"
+        id="password"
+        type="password"
+        autocomplete="off"
+        name="password"
+        placeholder="Contraseña"
+        required="required"
+        formControlName="password"
+      />
     </div>
-    <button class="login__form--button" [disabled]="!loginModel.email && !loginModel.password"  type="submit">Entrar</button>
+    <button
+      class="login__form--button"
+      [disabled]="!loginForm"
+      type="submit"
+    >
+      Entrar
+    </button>
   </form>
-
 </div>
