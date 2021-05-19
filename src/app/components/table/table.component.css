@@ -1,0 +1,61 @@
+.tablecustom {
+  margin-top: 10%;
+  background-color: #677baf;
+  flex-direction: column;
+  border-collapse: collapse;
+
+}
+
+.tablecustom th {
+  color: white;
+  width: 100vh;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.tablecustom td {
+  background: #f8f4f4 !important;
+  color: #21272d;
+  width: 100vh;
+  border: none;
+}
+
+.tablecustom td {
+  background-color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.table__label--id {
+  color: #d20000 !important;
+}
+
+.tablecustom__data--subtitle {
+  color: #00bdd2;
+  font-size: small;
+  margin-block-start: 0 !important;
+}
+
+.tablecustom__columndescription {
+  display: block;
+  background: #f8f4f4 !important;
+  min-width: 50vh;
+  display: flex;
+  flex-direction: row; 
+}
+
+.tablecustom__iconeye {
+  background-image: url("../../../assets/login/eye.png");
+  background-repeat: no-repeat;
+  background-position: 3px center;
+  background-size: 20px;
+  width: 25px;
+  /* padding-left: 35px; */
+  border: none;
+  /* margin-bottom: 5%;  */
+  margin-left: 15px;
+  outline: none;
+}
+.tablecustom__iconeye:disabled{
+  display: none;
+}

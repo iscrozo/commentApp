@@ -1,0 +1,62 @@
+<div class="createcomment">
+  <form
+    class="createcomment__body"
+    (ngSubmit)="onSubmitComment()"
+    autocomplete="off"
+  >
+    <h3 class="createcomment--title">Nuevo Usuario</h3>
+    <div class="createcomment__body--inputemail">
+      <input
+        class="createcomment__body--input"
+        type="text"
+        name="name"
+        id="name"
+        autocomplete="off"
+        [(ngModel)]="createCommentComponent.name"
+        placeholder="Nombre"
+        required="required"
+         />
+    </div>
+    <div class="createcomment__body--inputemail">
+      <input
+        class="createcomment__body--input"
+        type="email"
+        name="email"
+        id="email" 
+        autocomplete="off"
+        [(ngModel)]="createCommentComponent.email"
+        placeholder="Correo electronico"
+        required="required"
+      />
+    </div>
+
+    <div class="createcomment__body--inputemail">
+      <input
+        class="createcomment__body--input"
+        required="required"
+        type="text"
+        name="website"
+        [(ngModel)]="createCommentComponent.website"
+        id="website" 
+        placeholder="Pagina Web"
+        autocomplete="off"
+      />
+    </div>
+    <div class="createcomment__body--inputemail">
+      <input
+        class="createcomment__body--input"
+        type="text"
+        id="content" 
+        name="content"
+        autocomplete="off"
+        [(ngModel)]="createCommentComponent.content"
+        placeholder="Comentario"
+        required="required"
+      />
+    </div>
+    <div class="createcomment__footer">
+      <button class="createcomment__footer--btcancel" type="reset">Cancelar</button>
+      <button class="createcomment__footer--btsuccess" type="submit">Guardar</button>
+    </div>
+  </form>
+</div>

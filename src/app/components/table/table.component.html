@@ -1,0 +1,29 @@
+<h4 class="tablecustom__data--subtitle">
+  {{ item.length }} Comentarios registrados
+</h4>
+<table class="tablecustom">
+  <tr>
+    <th>id</th>
+    <th>Nombre:</th>
+    <th>Correo Electrónico:</th>
+    <th>Página Web:</th>
+    <th>Comentarios:</th>
+  </tr>
+  <tr *ngFor="let data of item"  >
+    <td class="table__label--id">{{ data.id }}</td>
+    <td>{{ data.name  || " - - " }}</td>
+    <td>{{ data.email || " - - " }}</td>
+    <td>{{ data.website || " - - " }}</td>
+    <td class="tablecustom__columndescription" >
+      {{ data.content || " - - "
+      }}  
+        <button 
+        (click)="getIdComment(data.id)"
+        class="tablecustom__iconeye"
+        [disabled]="!data.content"
+      ></button> 
+    </td>
+  </tr>
+</table>
+
+<!-- https://xd.adobe.com/view/2fb10331-4175-4931-9bc1-0d0b6cdb0102-7ae2/specs/ -->

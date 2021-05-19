@@ -1,0 +1,72 @@
+.createcomment{
+    width: 50%;
+    background-color: #F8F4F4;
+}
+
+
+.createcomment--title { 
+    letter-spacing: 0px;
+    color: #677baf; 
+  }
+
+.createcomment__body{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+
+.createcomment__footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+
+
+.createcomment__body--input {
+    height: 40px;
+    width: 44vh;
+    border: transparent;
+    letter-spacing: 0px;
+    color: #677baf;
+  }
+  .createcomment__body--inputemail {
+    background-image: url("../../../assets/login/mail.svg");
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    background-size: 15px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    border: 1px solid #677baf;
+    margin-bottom: 5%;
+  }
+
+  .createcomment__footer--btcancel{
+    color: #677baf !important;
+    border: 1px solid #677baf ;
+    width: 35%;
+    height: 20%;
+    padding: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  .createcomment__footer--btsuccess{
+    background-color: #677baf !important;
+    color: white;
+    border: 1px solid #677baf ;
+    width: 35%;
+    height: 20%;
+    padding: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 10px;
+    text-transform: uppercase;
+  }

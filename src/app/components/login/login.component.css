@@ -1,0 +1,75 @@
+.login {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.login__form {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login__form--image {
+  width: 40%;
+  height: 50%;
+}
+.login__form--title {
+  text-align: center;
+  letter-spacing: 0px;
+  color: #677baf;
+  text-transform: uppercase;
+}
+.login__form--input {
+  height: 40px;
+  width: 44vh;
+  border: transparent;
+  letter-spacing: 0px;
+  color: #677baf;
+}
+.login__form--inputemail {
+  background-image: url("../../../assets/login/mail.svg");
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 15px;
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  border: 1px solid #677baf;
+  margin-bottom: 5%;
+}
+
+.login__form--inputlock {
+  background-image: url("../../../assets/login/lock.svg");
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  border: 1px solid #677baf;
+  margin-bottom: 5%;
+}
+
+.login__form--inputemail:focus {
+  outline: none;
+}
+.login__form--input::placeholder {
+  color: #677baf;
+}
+
+.login__form--button {
+  background: #677baf 0% 0%;
+  box-shadow: 0px 25px 95px #28d8a129;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 50vh;
+  text-transform: uppercase;
+}
+.login__form--button:disabled {
+  background: #e0e3ea;
+}

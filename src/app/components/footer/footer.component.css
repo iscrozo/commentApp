@@ -1,0 +1,11 @@
+.footer {
+  background: #677baf 0% 0% no-repeat padding-box;
+  width: auto;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.footer--label {
+  text-align: center;
+  letter-spacing: 0px;
+  color: #ffffff;
+}

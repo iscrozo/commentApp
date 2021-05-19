@@ -1,0 +1,29 @@
+.dashboard__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.dashboard__container--child{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+
+
+}
+.dashboard__container--data{
+  width: 100vh;
+  margin-left: 15px;
+}
+
+.dashboard__container--data--title{
+  color: #677BAF;
+  margin-block-end: 0 !important;
+
+}
+
+.dashboard__container--data--subtitle{
+  color: #00BDD2; 
+  font-size: small;
+  margin-block-start: 0 !important;
+}

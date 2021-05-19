@@ -1,0 +1,24 @@
+.menu{
+    background-color: #677BAF;
+    height: 100%;
+    width: 250px;
+    padding-top: 60px;
+    z-index: 1;  
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__button{
+   border:none;
+   background-color: #677BAF;
+   width: 100%; 
+   padding-top: 10px;
+   margin-bottom: 10%;
+   color: white;
+   padding-bottom: 10px;
+}
+
+.menu__button:hover{
+    border: 1px solid white;
+}
