@@ -1,5 +1,6 @@
 ## Ejercicio website - crear formulario
 <p align="center">
+<div style="background: white; width : 50px; height : 50px;">
 <img src="src/assets/login/logo.png"  alt="logo" width="80" height="80">
 </p>
 
