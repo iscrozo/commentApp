@@ -1,3 +1,9 @@
+## Ejercicio website - crear formulario
+<p align="center">
+<img src="src/assets/login/logo.png"  alt="logo" width="80" height="80">
+</p>
+
+
 # CrudComments
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
