@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
     private router: Router,
     private commentsServices: CommentsService
   ) {}
-  // DataComments: CommentsModel[] = [];
+   
 
   aobData: any[] = [];
 

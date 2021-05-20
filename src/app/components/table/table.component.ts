@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit ,AfterViewInit, ViewChild} from '@angular/core';
 import { CommentsModel } from 'src/app/models/comments.model';
 import { CommentsService } from '../../services/comments.service';
 
@@ -7,7 +7,7 @@ import { CommentsService } from '../../services/comments.service';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css'],
 })
-export class TableComponent implements OnInit {
+export class TableComponent  implements OnInit {
   @Input() item: CommentsModel[] = [];
   constructor(private commentsServices: CommentsService) {}
 
@@ -22,14 +22,4 @@ export class TableComponent implements OnInit {
     });
   }
 
-  /**
-   *
-   */
-  calcStyle(value: any, value2: any, value3: any) {
-    if (value != null && value2 != null && value3 != null) {
-      return { display: 'block' };
-    } else {
-      return { display: 'none' };
-    }
-  }
 }

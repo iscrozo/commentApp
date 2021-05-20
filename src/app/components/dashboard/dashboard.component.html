@@ -1,16 +1,17 @@
 <!-- <a [routerLink]="['createcomment']" >Crear comentario</a> -->
 
 <!-- <a routerLink="/createcomment" >Crear</a> -->
-<div class="dashboard__container">
+<div class="container-fluid" style="margin-top: 5%;">
   <app-header></app-header>
-  <div class="dashboard__container--child">
-    <div class="menu">
-      <app-menu></app-menu>
-    </div>
-    <div class="dashboard__container--data">
-      <h2 class="dashboard__container--data--title">Comentarios</h2>
-      <!-- <app-table [item]="aobData"></app-table> -->
-      <app-create-comment [aobItem]="aobData"></app-create-comment>
-    </div>
+  <div class="row">
+      <div class="col-2 px-1 position-fixed" style="background-color: #677BAF;" id="sticky-sidebar">
+        <app-menu></app-menu>
+      </div>
+      <div class="col offset-2" id="main "style="padding-top:2%;">
+        <div class="container">
+          <!-- <app-table [item]="aobData"></app-table>
+          <app-create-comment [aobItem]="aobData"></app-create-comment>  -->
+        </div>
+      </div>
   </div>
 </div>

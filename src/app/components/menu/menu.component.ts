@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -7,18 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
 
   navigateListado(){
-    
+    this.router.navigateByUrl(',/table');
   }
 
   navigateCreateComment(){
-
+    this.router.navigateByUrl('/createcomment');
   }
-
+  
 }

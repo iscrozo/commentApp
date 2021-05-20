@@ -1,26 +1,39 @@
-<h4 class="tablecustom__data--subtitle">
-  {{ item.length }} Comentarios registrados
-</h4>
-<table class="tablecustom">
-  <tr>
-    <th>id</th>
-    <th>Nombre:</th>
-    <th>Correo Electrónico:</th>
-    <th>Página Web:</th>
-    <th>Comentarios:</th>
-  </tr>
-  <tr *ngFor="let data of item">
-    <td class="table__label--id">{{ data.id }}</td>
-    <td>{{ data.name || " - - " }}</td>
-    <td>{{ data.email || " - - " }}</td>
-    <td>{{ data.website || " - - " }}</td>
-    <td class="tablecustom__columndescription">
-      {{ data.content || " - - " }}
-      <button
-        (click)="getIdComment(data.id)"
-        class="tablecustom__iconeye"
-        [disabled]="!data.content"
-      ></button>
-    </td>
-  </tr>
-</table>
+<div>
+  <div>
+    <h2 class="dashboard__container--data--title">Comentarios</h2>
+  </div>
+  <div>
+    <h4 class="tablecustom__data--subtitle">
+      {{ item.length }} Comentarios registrados
+    </h4>
+  </div>
+  <div class="table-responsive"> 
+    <table class="tablecustom table"  >
+      <thead>
+      <tr>
+        <th scope="col" >id</th>
+        <th scope="col" >Nombre:</th>
+        <th scope="col">Correo Electrónico:</th>
+        <th scope="col">Página Web:</th>
+        <th scope="col">Comentarios:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of item">
+        <td class="table__label--id">{{ data.id }}</td>
+        <td>{{ data.name || " - - " }}</td>
+        <td>{{ data.email || " - - " }}</td>
+        <td>{{ data.website || " - - " }}</td>
+        <td class="tablecustom__columndescription">
+          {{ data.content || " - - " }}
+          <button
+            (click)="getIdComment(data.id)"
+            class="tablecustom__iconeye"
+            [disabled]="!data.content"
+          ></button>
+        </td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+</div>
