@@ -33,17 +33,17 @@ export class CreateCommentComponent implements OnInit {
       /^[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?$/;
 
     return new FormGroup({
-      name: new FormControl('Sebas', [
+      name: new FormControl('', [
         Validators.required,
         Validators.pattern(DATA_AZ_REGEX),
         Validators.maxLength(35),
       ]),
-      email: new FormControl('camynator@yahoo.es', [
+      email: new FormControl('', [
         Validators.required,
         Validators.email,
       ]),
-      website: new FormControl('www.hola.com', [Validators.pattern(URL_REGEX)]),
-      content: new FormControl('primeras palabras', [
+      website: new FormControl('', [Validators.pattern(URL_REGEX)]),
+      content: new FormControl('', [
         Validators.required,
         Validators.maxLength(100),
       ]),
