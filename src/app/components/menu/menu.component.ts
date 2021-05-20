@@ -15,11 +15,11 @@ export class MenuComponent implements OnInit {
 
 
   navigateListado(){
-    this.router.navigateByUrl(',/table');
+    this.router.navigateByUrl('/dashboard/table');
   }
 
   navigateCreateComment(){
-    this.router.navigateByUrl('/createcomment');
+    this.router.navigateByUrl('/dashboard/createcomment');
   }
   
 }

@@ -1,5 +1,5 @@
 export interface CommentsModel {
-  id: number;
+  id: number | null;
   article_id: number | null;
   content: string | null;
   name: string | null;

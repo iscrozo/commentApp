@@ -1,39 +1,59 @@
 <div>
   <div>
-    <h2 class="dashboard__container--data--title">Comentarios</h2>
+    <p class="dashboard__container--data--title">Comentarios</p>
   </div>
   <div>
-    <h4 class="tablecustom__data--subtitle">
+    <p class="tablecustom__data--subtitle">
       {{ item.length }} Comentarios registrados
-    </h4>
+    </p>
   </div>
-  <div class="table-responsive"> 
-    <table class="tablecustom table"  >
-      <thead>
-      <tr>
-        <th scope="col" >id</th>
-        <th scope="col" >Nombre:</th>
-        <th scope="col">Correo Electrónico:</th>
-        <th scope="col">Página Web:</th>
-        <th scope="col">Comentarios:</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let data of item">
-        <td class="table__label--id">{{ data.id }}</td>
-        <td>{{ data.name || " - - " }}</td>
-        <td>{{ data.email || " - - " }}</td>
-        <td>{{ data.website || " - - " }}</td>
-        <td class="tablecustom__columndescription">
-          {{ data.content || " - - " }}
-          <button
-            (click)="getIdComment(data.id)"
-            class="tablecustom__iconeye"
-            [disabled]="!data.content"
-          ></button>
+  <div class="table-responsive">
+    <div class="table__filter"> 
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Buscar...."
+        #input
+      />
+    </div>
+    <table
+      mat-table
+      [dataSource]="tableDataSrc"
+      class="mat-elevation-z8 tablecustom table"
+    >
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th>
+        <td mat-cell *matCellDef="let element" class="table__label--id">
+          {{ element.id }}
         </td>
-      </tr>
-    </tbody>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>email</th>
+        <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="website">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</th>
+        <td mat-cell *matCellDef="let element">{{ element.website }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="content">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</th>
+        <td mat-cell *matCellDef="let element">{{ element.content }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
+    <mat-paginator
+      [pageSizeOptions]="[10]"
+      showFirstLastButtons
+    ></mat-paginator>
   </div>
 </div>

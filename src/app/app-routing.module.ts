@@ -13,18 +13,16 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent,
-    pathMatch: 'full',
+    component: DashboardComponent, 
+
     children:[
       {
         path:'table',
-        component : TableComponent,
-        pathMatch:'full'
+        component : TableComponent
       },
       {
         path:'createcomment',
-        component : CreateCommentComponent,
-        pathMatch: 'full',
+        component : CreateCommentComponent
       },
     ]
   },

@@ -11,8 +11,8 @@
   align-items: center;
 }
 .login__form--image {
-  width: 40%;
-  height: 50%;
+  width: 18vh;
+  height: 15vh;
 }
 .login__form--title {
   text-align: center;

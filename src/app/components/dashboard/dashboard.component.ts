@@ -14,15 +14,13 @@ export class DashboardComponent implements OnInit {
     private router: Router,
     private commentsServices: CommentsService
   ) {}
-   
 
   aobData: any[] = [];
 
   ngOnInit(): void {
     console.log('dashboard componente');
-    this.commentsServices.getCommentList().subscribe((DataComments) => {
-      this.aobData = DataComments;
-    });
+    // this.commentsServices.getCommentList().subscribe((DataComments) => {
+    //   this.aobData = DataComments;
+    // });
   }
- 
 }

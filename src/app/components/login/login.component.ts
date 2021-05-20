@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       console.log('Data Valida');
-      this.router.navigateByUrl('/dashboard');
+      this.router.navigateByUrl('/dashboard/table');
     } else {
       console.log('Data Invalid');
     }
